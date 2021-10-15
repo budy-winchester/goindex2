@@ -269,9 +269,9 @@ function file_code(path){
 // 文件展示 视频 |mp4|webm|avi|
 function file_video(path){
 	var url = window.location.origin + path;
-	var playBtn = `<a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" href="potplayer://${url}"><i class="mdui-icon material-icons">&#xe038;</i>在 potplayer 中播放</a>`;
+	var playBtn = `<a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" href="potplayer://${url}"><i class="mdui-icon material-icons">&#xe038;</i>potplayer</a>`;
 	if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { //移动端
-	    playBtn = `	<a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" href="intent:${url}#Intent;package=com.mxtech.videoplayer.ad;S.title=${path};end"><i class="mdui-icon material-icons">&#xe039;</i>在mxplayer中播放</a>`;
+	    playBtn = `	<a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" href="intent:${url}#Intent;package=com.mxtech.videoplayer.ad;S.title=${path};end"><i class="mdui-icon material-icons">&#xe039;</i>mxplayer</a>`;
 	}
 	var content = `
 <div class="mdui-container-fluid">
@@ -282,11 +282,11 @@ function file_video(path){
 	<br>${playBtn}
 	<!-- 固定标签 -->
 	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">下载地址</label>
+	  <label class="mdui-textfield-label">Link Unduh</label>
 	  <input class="mdui-textfield-input" type="text" value="${url}"/>
 	</div>
 	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">HTML 引用地址</label>
+	  <label class="mdui-textfield-label">Link HTML</label>
 	  <textarea class="mdui-textfield-input"><video><source src="${url}" type="video/mp4"></video></textarea>
 	</div>
 </div>
@@ -307,11 +307,11 @@ function file_audio(path){
 	<br>
 	<!-- 固定标签 -->
 	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">下载地址</label>
+	  <label class="mdui-textfield-label">Link Unduh</label>
 	  <input class="mdui-textfield-input" type="text" value="${url}"/>
 	</div>
 	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">HTML 引用地址</label>
+	  <label class="mdui-textfield-label">Link HTML</label>
 	  <textarea class="mdui-textfield-input"><audio><source src="${url}"></audio></textarea>
 	</div>
 </div>
@@ -330,15 +330,15 @@ function file_image(path){
 	<img class="mdui-img-fluid" src="${url}"/>
 	<br>
 	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">下载地址</label>
+	  <label class="mdui-textfield-label">Link Unduh</label>
 	  <input class="mdui-textfield-input" type="text" value="${url}"/>
 	</div>
 	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">HTML 引用</label>
+	  <label class="mdui-textfield-label">Link HTML</label>
 	  <input class="mdui-textfield-input" type="text" value="<img src='${url}' />"/>
 	</div>
         <div class="mdui-textfield">
-	  <label class="mdui-textfield-label">Markdown 引用地址</label>
+	  <label class="mdui-textfield-label">Markdown</label>
 	  <input class="mdui-textfield-input" type="text" value="![](${url})"/>
 	</div>
         <br>
