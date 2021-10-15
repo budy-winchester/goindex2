@@ -45,7 +45,7 @@ function init(){
     document.siteName = $('title').html();
     $('body').addClass("mdui-theme-primary-blue-grey mdui-theme-accent-blue");
     var html = `
-    <h1 id="heading">Index of <?php echo urldecode($path);?></h1>
+    <h1 id="heading">Game <?php echo urldecode($path);?></h1>
     <table id="table">
     </table>
 	`;
