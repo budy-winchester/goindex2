@@ -81,7 +81,7 @@ function nav(path){
 // 渲染文件列表
 function list(path){
 	var content = `
-<tr><th class="file-name">Name</th><th class="file-size">Size</th><th class="file-date-modified">Date Modified</th><th class="file-type">Type</th></tr>
+<tr><th class="file-name">Nama</th><th class="file-size">Ukuran</th><th class="file-date-modified">Tanggal Buat</th><th class="file-type">Kategori</th></tr>
 	`;
 
 	if(path != '/'){
