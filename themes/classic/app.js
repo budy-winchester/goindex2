@@ -5,7 +5,7 @@ h1{border-bottom:1px solid silver;margin-bottom:10px;padding-bottom:10px;white-s
 table{border-collapse:collapse;font-family:Consolas,monaco,monospace}
 th{font-weight:700}
 .file-name{text-align:left}
-.file-type{text-align:center}
+//.file-type{text-align:center}
 .file-size{padding-left:4em}
 .file-date-created,
 .file-date-modified{padding-left:2em}
@@ -75,13 +75,14 @@ function title(path){
 // 渲染导航栏
 function nav(path){
 	path = decodeURI(path);
-    $('#heading').html('Index of '+path);
+    $('#heading').html('SWITCH '+path);
 }
 
 // 渲染文件列表
 function list(path){
 	var content = `
-<tr><th class="file-name">Nama</th><th class="file-size">Ukuran</th><th class="file-date-modified">Tanggal Buat</th><th class="file-type">Kategori</th></tr>
+<tr><th class="file-name">Nama</th><th class="file-size">Ukuran</th><th class="file-date-modified">Tanggal Buat</th></tr>
+//<tr><th class="file-name">Nama</th><th class="file-size">Ukuran</th><th class="file-date-modified">Tanggal Buat</th><th class="file-type">Kategori</th></tr>
 	`;
 
 	if(path != '/'){
