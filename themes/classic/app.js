@@ -5,7 +5,6 @@ h1{border-bottom:1px solid silver;margin-bottom:10px;padding-bottom:10px;white-s
 table{border-collapse:collapse;font-family:Consolas,monaco,monospace}
 th{font-weight:700}
 .file-name{text-align:left}
-.file-type{text-align:center}
 .file-size{padding-left:4em}
 .file-date-created,
 .file-date-modified{padding-left:2em}
@@ -128,8 +127,7 @@ function list_files(path,files){
             item['size'] = "";
         }
         item['modifiedTime'] = utc2beijing(item['modifiedTime']);
-        item['size'] = formatFileSize(item['size']);
-        (item['mimeType'] == 'application/vnd.google-apps.folder'){
+        item['size'] = formatFileSize(item['size']){
         	var p = path+item.name+'/';
             html +=`
 				<tr>
