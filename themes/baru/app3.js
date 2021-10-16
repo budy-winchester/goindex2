@@ -45,7 +45,7 @@ function init(){
     document.siteName = $('title').html();
     $('body').addClass("mdui-theme-primary-blue-grey mdui-theme-accent-blue");
     var html = `
-    <h1 id="heading">Index of <?php echo urldecode($path);?></h1>
+    <h1 id="heading">SWITCH <?php echo urldecode($path);?></h1>
     <table id="table">
     </table>
 	`;
@@ -318,8 +318,7 @@ function utc2beijing(utc_datetime) {
     var T_pos = utc_datetime.indexOf('T');
     var Z_pos = utc_datetime.indexOf('Z');
     var year_month_day = utc_datetime.substr(0,T_pos);
-    var hour_minute_second = utc_datetime.substr(T_pos+1,Z_pos-T_pos-1);
-    var new_datetime = year_month_day+" "+hour_minute_second; // 2017-03-31 08:02:06
+    var new_datetime = day_month_year; // 2017-03-31 08:02:06
 
     // 处理成为时间戳
     timestamp = new Date(Date.parse(new_datetime));
